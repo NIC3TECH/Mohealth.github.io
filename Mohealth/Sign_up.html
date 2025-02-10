@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head> 
+   <meta charset="UTF-8">
+   <meta name="viewport"  content="width= device-width, initial-scale=1.0">
+   <title> Login Form </title>
+   <link rel="stylesheet" href="signin.css">
+   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body background="Images1/bread.jpg">
+    <a href="index.html"><img src="images1/Mologo.png"> </a>
+             
+    <div class="wrapper">
+    <form action="Registration.php" method="post">
+        <h1>Sign up</h1>
+        <div class="input-box">
+            <input type="text" placeholder="First name" id="fname" name="fname";
+            required>
+            <i class='bx bx-user'></i>
+        </div>
+        <div class="input-box">
+            <input type="text" placeholder="Last name" id="lname" name="lname"
+            required>
+            <i class='bx bxs-user'></i>
+            </div>
+
+        <div class="input-box">
+            <input type="password" placeholder="Create Password" id="fpassword" name="fpassword"
+            required>
+            <i class='bx bxs-lock-alt'  ></i>
+        </div>
+       
+            <div class="input-box">
+                <input type="text" placeholder="I.D card number" id="NIC" name="NIC"
+                required>
+                <i class='bx bxs-id-card'></i>
+                </div>  
+                
+            
+    <div class="input-box">
+        <input type="number" placeholder="Age" id="Age " name="Age">
+                <i class='bx bxs-user'></i>
+                </div>  
+
+                <div class="radio_box">   
+                    <p>Gender:</p>
+            <input type="radio" name="gender" value="male"  checked/>Male</li>
+            <input type="radio" name="gender" value="female" />Female</li>
+            <input type="radio" name="gender" value="other"  />Other</li>
+                    </div>
+         
+        <button type="submit" class="btn">Sign up</button>
+        <div class="register-link">
+            <p> Have an account? <a href="index.html">sign in</a></p>
+        </div>
+</div>
+    </form>
+</body>
+</html>
