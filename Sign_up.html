@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head> 
+   <meta charset="UTF-8">
+   <meta name="viewport"  content="width= device-width, initial-scale=1.0">
+   <title> Login Form </title>
+   <link rel="stylesheet" href="signin.css">
+   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+   <script src="https://smtpjs.com/v3/smtp.js"></script>
+</head>
+
+<body background="Images1/bread.jpg">
+    <a href="index.html"><img src="images1/Mologo.png"> </a>
+             
+    <div class="wrapper">
+    <form action="Registration.php" method="post">
+        <h1>Sign up</h1>
+        <div class="input-box">
+            <input type="text" placeholder="First name" id="fname" name="fname";
+            required>
+            <i class='bx bx-user'></i>
+        </div>
+        <div class="input-box">
+            <input type="text" placeholder="Last name" id="lname" name="lname"
+            required>
+            <i class='bx bxs-user'></i>
+        </div>
+
+        <div class="input-box">
+            <input type="email" placeholder="Email" id="lemail" name="lemail"
+            required>
+            <i class='bx bxs-user'></i>
+            </div>
+
+            <div class="otpinput-box">
+                <input type="text" placeholder="Enter OTP sent to your email" id="otp_inp" name="fpassword" required>
+                <i class='bx bxs-lock-alt'></i>
+            </div>
+
+            <div class="input-box">
+                <input type="password" placeholder="Create Password" id="fpassword" name="fpassword" required>
+                <i class='bx bxs-lock-alt'></i>
+            </div>
+       
+            <div class="input-box">
+                <input type="text" placeholder="I.D card number" id="NIC" name="NIC"
+                required>
+                <i class='bx bxs-id-card'></i>
+                </div>
+
+       <div class="input-box">
+        <input type="text" placeholder="Phone number" id="nphone" name="nphone" required>
+        <i class='bx bxs-phone' ></i>
+        </div>       
+            
+    <div class="input-box">
+        <input type="number" placeholder="Age" id="Age " name="Age">
+                <i class='bx bxs-user'></i>
+                </div>  
+
+                <div class="radio_box">   
+                    <p>Gender:</p>
+            <input type="radio" name="gender" value="male"  checked/>Male</li>
+            <input type="radio" name="gender" value="female" />Female</li>
+            <input type="radio" name="gender" value="other"  />Other</li>
+                    </div>
+
+                    <small class="password-requirements">
+                        Password must be at least 8 characters long and include at least one uppercase letter, one lowercase letter, one number, and one special character (e.g., @, #, $).
+                    </small>
+         
+        <button type="submit" class="btn">Submit</button>
+        <div class="register-link">
+            <p>Already have an account? <a href="index.html">sign in</a></p>
+        </div>
+</div>
+<script src="email-otp.js"></script>
+    </form>
+
+    <script>
+        document.getElementById("fpassword").addEventListener("input", function() {
+            let password = this.value;
+            let regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+            
+            if (regex.test(password)) {
+                this.style.borderColor = "green";
+            } else {
+                this.style.borderColor = "red";
+            }
+        });
+    </script>
+</body>
+</html>
